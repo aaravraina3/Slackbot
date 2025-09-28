@@ -1,0 +1,15 @@
+# Core Slack SDK - This is the main library for building Slack bots
+slack-bolt==1.18.1
+
+# Additional useful libraries for bot development
+python-dotenv==1.0.0          # For loading environment variables from .env file
+requests==2.31.0              # For making HTTP requests (if needed)
+schedule==1.2.0               # For scheduling tasks (if needed)
+
+# Development and testing
+pytest==7.4.3                 # For running tests
+black==23.9.1                 # Code formatter (optional but recommended)
+flake8==6.1.0                 # Code linter (optional but recommended)
+
+# Logging and monitoring
+python-logging==1.0.0         # Enhanced logging (if needed)
