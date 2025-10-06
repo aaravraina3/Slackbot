@@ -1,0 +1,8 @@
+slack_bolt==1.19.0
+slack_sdk==3.27.1
+google-api-python-client==2.138.0
+google-auth==2.35.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.2.0
+python-dotenv==1.0.1
+pytz==2024.1
