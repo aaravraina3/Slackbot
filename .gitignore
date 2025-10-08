@@ -47,3 +47,16 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Test files for specific people (don't push to GitHub)
+test_*_aarav.py
+test_*_chelsea.py
+test_*_aditya.py
+test_*_neha.py
+test_three_people.py
+test_chelsea_reaction.py
+test_smart_lookup_aarav.py
+improved_email_lookup.py
+test_message_*.py
+test_embed_formats.py
+check_all_reactions.py

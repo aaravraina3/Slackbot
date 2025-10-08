@@ -5,19 +5,27 @@
 - Google Sheets integration working
 - Message templates updated
 - Tracking sheets created
+- Code pushed to GitHub (secrets removed for security)
 
 ## Issues & Solutions
 
 ### 1. Email Lookup Problems ❌
 **Issue:** Some people can't be found in Slack by email
-- Neha Jha (jha.ne@northeastern.edu) - not found
-- Some people might use different emails in Slack vs roster
+- People might use different emails in Slack vs roster
+- **IMPORTANT:** Some people use `@husky.neu.edu` emails in Slack instead of `@northeastern.edu`
 
-**Solutions Needed:**
-- [ ] Add fallback email lookup (try both Northeastern + personal)
+**Examples Found:**
+- Chelsea Kwan: Uses `kwan.che@husky.neu.edu` in Slack (not `kwan.che@northeastern.edu`)
+
+**Solutions Implemented:**
+- [x] Add fallback email lookup (try Northeastern + husky variations)
+- [x] Try email variations: `@northeastern.edu`, `@husky.neu.edu`
+
+**Solutions Still Needed:**
 - [ ] Add manual Slack username mapping
 - [ ] Create error handling for missing users
 - [ ] Add logging for failed lookups
+- [ ] Try personal email variations
 
 ### 2. Reaction Tracking Not Working ❌
 **Issue:** Bot can't track reactions to messages
@@ -33,12 +41,22 @@
 - [ ] Check Google Form responses directly
 - [ ] Use keyword detection in replies
 
-### 3. Form Preview Not Showing ❌
+### 3. Form Completion Tracking ❌
+**Issue:** Bot can't properly check if forms are completed
+**Current Status:** Need to implement form response checking
+
+**Solutions Needed:**
+- [ ] Connect to Google Forms API to check responses
+- [ ] Match form responses to Slack users
+- [ ] Update tracking sheets when forms are completed
+- [ ] Handle different response formats
+
+### 4. Form Preview Not Showing ❌
 **Issue:** Google Form not showing as embedded preview in Slack
 **Status:** Partially fixed - URL on separate line
 **Still needs:** Verification that previews work consistently
 
-### 4. Message Template Updates ✅
+### 5. Message Template Updates ✅
 **Changes Made:**
 - Changed "team" to "Community team" 
 - Updated cooldown from "4 weeks" to "until your whole team has done it"
@@ -65,9 +83,11 @@
 ## Next Steps
 
 ### High Priority
-1. **Fix email lookup** - Add fallback mechanisms
-2. **Implement reaction tracking** - Add required scopes or alternative method
-3. **Test with more people** - Verify bot works with different users
+1. **Change Generate Slackbot PFP** - Update bot profile picture
+2. **Fix checking if form is done** - Implement proper form completion tracking
+3. **Fix email lookup** - Add fallback mechanisms  
+4. **Implement reaction tracking** - Add required scopes or alternative method
+5. **Test with more people** - Verify bot works with different users
 
 ### Medium Priority  
 1. **Add error logging** - Track failed lookups and sends
